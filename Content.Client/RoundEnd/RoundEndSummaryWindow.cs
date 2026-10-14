@@ -284,8 +284,8 @@ namespace Content.Client.RoundEnd
             {
                 StorytellerHistoryType.HelpfulEvent => "Положительные",
                 StorytellerHistoryType.NeutralEvent => "Нейтральные события",
-                StorytellerHistoryType.MinorCalmEvent => "Мелкие происшествия",
-                StorytellerHistoryType.MajorCalmEvent => "Крупные происшествия",
+                StorytellerHistoryType.MinorCalmEvent => "Мелкие происшествия", // Lust-Edit
+                StorytellerHistoryType.MajorCalmEvent => "Крупные происшествия", // Lust-Edit
                 StorytellerHistoryType.MinorAntagEvent => "Антагонисты",
                 StorytellerHistoryType.MajorAntagEvent => "Крупные антагонисты",
                 StorytellerHistoryType.Death => "Смерти",
