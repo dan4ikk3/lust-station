@@ -4,4 +4,9 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._Lust.Chemistry;
 
 [Serializable, NetSerializable]
-public sealed partial class ReagentCraftDoAfterEvent : SimpleDoAfterEvent;
+public sealed partial class ReagentCraftDoAfterEvent : DoAfterEvent
+{
+    public int Recipe;
+
+    public override DoAfterEvent Clone() => this;
+}

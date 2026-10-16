@@ -39,7 +39,7 @@ public sealed partial class ReagentCraftSystem : EntitySystem
         if (!HasComp<DrainableSolutionComponent>(container) || !CanCraft(ent, container, user, out var recipe, out _))
             return false;
 
-        return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, recipe.Time, new ReagentCraftDoAfterEvent(), ent, target: ent, used: container)
+        return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, recipe.Time, new ReagentCraftDoAfterEvent { Recipe = ent.Comp.Recipes.IndexOf(recipe) }, ent, target: ent, used: container)
         {
             NeedHand = true,
             BreakOnMove = true,
@@ -56,7 +56,7 @@ public sealed partial class ReagentCraftSystem : EntitySystem
         args.Handled = true;
 
         // Состав ёмкости проверяем заново
-        if (CanCraft(ent, container, args.User, out var recipe, out var solution))
+        if (CanCraft(ent, container, args.User, out var recipe, out var solution, args.Recipe))
             Craft(ent, recipe, solution, args.User);
     }
 
@@ -68,7 +68,8 @@ public sealed partial class ReagentCraftSystem : EntitySystem
         EntityUid container,
         EntityUid user,
         [NotNullWhen(true)] out ReagentCraftRecipe? recipe,
-        out Entity<SolutionComponent> solution)
+        out Entity<SolutionComponent> solution,
+        int pinned = -1)
     {
         recipe = null;
         solution = default;
@@ -80,8 +81,12 @@ public sealed partial class ReagentCraftSystem : EntitySystem
 
         var best = FixedPoint2.Zero;
         var anyReagent = false;
-        foreach (var candidate in ent.Comp.Recipes)
+        for (var i = 0; i < ent.Comp.Recipes.Count; i++)
         {
+            if (pinned >= 0 && i != pinned)
+                continue;
+
+            var candidate = ent.Comp.Recipes[i];
             var quantity = contents.GetTotalPrototypeQuantity(candidate.Reagent);
             anyReagent |= quantity > FixedPoint2.Zero;
             if (quantity < candidate.MinQuantity || quantity <= best)
