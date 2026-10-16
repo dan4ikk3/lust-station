@@ -8,5 +8,10 @@ public sealed partial class ReagentCraftDoAfterEvent : DoAfterEvent
 {
     public int Recipe;
 
-    public override DoAfterEvent Clone() => this;
+    public override DoAfterEvent Clone() => new ReagentCraftDoAfterEvent
+    {
+        Recipe = Recipe,
+        Repeat = Repeat,
+        Handled = Handled,
+    };
 }
