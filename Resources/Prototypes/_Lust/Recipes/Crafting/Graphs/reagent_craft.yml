@@ -1,4 +1,4 @@
-# Крафты пропиткой для меню крафта (G): стак и ёмкость берутся из рук
+# Крафты пропиткой для меню крафта
 - type: constructionGraph
   id: ReagentCraft
   start: start
