@@ -1,0 +1,45 @@
+# Результаты крафта пропиткой: наследники с Construction, чтобы не править vanilla/Starlight прототипы
+- type: entity
+  parent: Blueointment1
+  id: Blueointment1ReagentCraft
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    graph: ReagentCraft
+    node: blueOintment
+
+- type: entity
+  parent: RedOintment1
+  id: RedOintment1ReagentCraft
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    graph: ReagentCraft
+    node: redOintment
+
+- type: entity
+  parent: RedPunctPack1
+  id: RedPunctPack1ReagentCraft
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    graph: ReagentCraft
+    node: redPunctPack
+
+- type: entity
+  parent: RedLacePack1
+  id: RedLacePack1ReagentCraft
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    graph: ReagentCraft
+    node: redLacePack
+
+- type: entity
+  parent: RedBruizPack1
+  id: RedBruizPack1ReagentCraft
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    graph: ReagentCraft
+    node: redBruizPack
