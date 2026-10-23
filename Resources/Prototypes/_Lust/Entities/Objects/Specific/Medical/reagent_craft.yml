@@ -1,4 +1,3 @@
-# Результаты крафта пропиткой: наследники с Construction, чтобы не править vanilla/Starlight прототипы
 - type: entity
   parent: Blueointment1
   id: Blueointment1ReagentCraft
