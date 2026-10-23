@@ -4,13 +4,9 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 
-// Шаг живёт в _Lust, но namespace vanilla, чтобы не править using в vanilla-файлах
 #pragma warning disable IDE0130
 namespace Content.Shared.Construction.Steps;
 
-/// <summary>
-/// Из рук берутся стак (одна единица) и ёмкость, в которой только указанный реагент в нужном количестве.
-/// </summary>
 [DataDefinition]
 public sealed partial class ReagentConstructionGraphStep : ConstructionGraphStep
 {
