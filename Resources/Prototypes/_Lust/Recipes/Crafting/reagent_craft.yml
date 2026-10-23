@@ -1,0 +1,40 @@
+# Крафты пропиткой реагентом в меню крафта (G)
+- type: construction
+  id: reagentCraftBlueOintment
+  graph: ReagentCraft
+  startNode: start
+  targetNode: blueOintment
+  category: construction-category-tools
+  objectType: Item
+
+- type: construction
+  id: reagentCraftRedOintment
+  graph: ReagentCraft
+  startNode: start
+  targetNode: redOintment
+  category: construction-category-tools
+  objectType: Item
+
+- type: construction
+  id: reagentCraftRedPunctPack
+  graph: ReagentCraft
+  startNode: start
+  targetNode: redPunctPack
+  category: construction-category-tools
+  objectType: Item
+
+- type: construction
+  id: reagentCraftRedLacePack
+  graph: ReagentCraft
+  startNode: start
+  targetNode: redLacePack
+  category: construction-category-tools
+  objectType: Item
+
+- type: construction
+  id: reagentCraftRedBruizPack
+  graph: ReagentCraft
+  startNode: start
+  targetNode: redBruizPack
+  category: construction-category-tools
+  objectType: Item

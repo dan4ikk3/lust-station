@@ -1,0 +1,47 @@
+# Крафты пропиткой для меню крафта (G): стак и ёмкость берутся из рук
+- type: constructionGraph
+  id: ReagentCraft
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: blueOintment
+      steps:
+      - stack: Ointment
+        reagent: Leporazine
+        amount: 15
+        doAfter: 3
+    - to: redOintment
+      steps:
+      - stack: Ointment
+        reagent: Pyrazine
+        amount: 15
+        doAfter: 3
+    - to: redPunctPack
+      steps:
+      - stack: Brutepack
+        reagent: Puncturase
+        amount: 15
+        doAfter: 3
+    - to: redLacePack
+      steps:
+      - stack: Brutepack
+        reagent: Lacerinol
+        amount: 15
+        doAfter: 3
+    - to: redBruizPack
+      steps:
+      - stack: Brutepack
+        reagent: Bruizine
+        amount: 15
+        doAfter: 3
+  - node: blueOintment
+    entity: Blueointment1ReagentCraft
+  - node: redOintment
+    entity: RedOintment1ReagentCraft
+  - node: redPunctPack
+    entity: RedPunctPack1ReagentCraft
+  - node: redLacePack
+    entity: RedLacePack1ReagentCraft
+  - node: redBruizPack
+    entity: RedBruizPack1ReagentCraft
