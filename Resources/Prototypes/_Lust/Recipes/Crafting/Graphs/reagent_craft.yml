@@ -8,6 +8,7 @@
     - to: blueOintment
       completed:
       - !type:ConsumeReagentCraft
+        stack: Ointment
         reagent: Leporazine
         amount: 15
       steps:
@@ -17,6 +18,7 @@
     - to: redOintment
       completed:
       - !type:ConsumeReagentCraft
+        stack: Ointment
         reagent: Pyrazine
         amount: 15
       steps:
@@ -26,6 +28,7 @@
     - to: redPunctPack
       completed:
       - !type:ConsumeReagentCraft
+        stack: Brutepack
         reagent: Puncturase
         amount: 15
       steps:
@@ -35,6 +38,7 @@
     - to: redLacePack
       completed:
       - !type:ConsumeReagentCraft
+        stack: Brutepack
         reagent: Lacerinol
         amount: 15
       steps:
@@ -44,6 +48,7 @@
     - to: redBruizPack
       completed:
       - !type:ConsumeReagentCraft
+        stack: Brutepack
         reagent: Bruizine
         amount: 15
       steps:
