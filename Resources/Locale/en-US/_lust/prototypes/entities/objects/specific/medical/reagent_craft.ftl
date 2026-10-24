@@ -1,0 +1,15 @@
+ent-Blueointment1ReagentCraft = { ent-Blueointment1 }
+    .desc = { ent-Blueointment1.desc }
+ent-RedOintment1ReagentCraft = { ent-RedOintment1 }
+    .desc = { ent-RedOintment1.desc }
+ent-RedPunctPack1ReagentCraft = { ent-RedPunctPack1 }
+    .desc = { ent-RedPunctPack1.desc }
+ent-RedLacePack1ReagentCraft = { ent-RedLacePack1 }
+    .desc = { ent-RedLacePack1.desc }
+ent-RedBruizPack1ReagentCraft = { ent-RedBruizPack1 }
+    .desc = { ent-RedBruizPack1.desc }
+reagent-craft-description-blue-ointment = Needs in a container: 15u { reagent-name-leporazine }.
+reagent-craft-description-red-ointment = Needs in a container: 15u { reagent-name-pyrazine }.
+reagent-craft-description-red-punct-pack = Needs in a container: 15u { reagent-name-puncturase }.
+reagent-craft-description-red-lace-pack = Needs in a container: 15u { reagent-name-lacerinol }.
+reagent-craft-description-red-bruiz-pack = Needs in a container: 15u { reagent-name-bruizine }.

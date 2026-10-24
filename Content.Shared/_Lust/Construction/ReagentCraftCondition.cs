@@ -14,7 +14,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared._Lust.Construction;
 
 /// <summary>
-/// Крафт доступен, только если в руках есть стак и ёмкость, в которой только нужный реагент в нужном количестве.
+/// Крафт доступен, только если в руках есть один набор и ёмкость, в которой только нужный реагент в нужном количестве.
 /// </summary>
 [DataDefinition]
 public sealed partial class ReagentCraftCondition : IConstructionCondition
@@ -37,13 +37,13 @@ public sealed partial class ReagentCraftCondition : IConstructionCondition
         if (hasStack && TryFindContainer(user, Reagent, Amount, out _))
             return true;
 
-        entMan.System<SharedPopupSystem>().PopupEntity(Loc.GetString("reagent-craft-description"), user, user);
+        entMan.System<SharedPopupSystem>().PopupEntity(Loc.GetString("construction-system-construct-no-materials"), user, user);
         return false;
     }
 
     public ConstructionGuideEntry GenerateGuideEntry()
     {
-        return new ConstructionGuideEntry { Localization = "reagent-craft-description" };
+        return new ConstructionGuideEntry { Localization = "construction-system-construct-no-materials" };
     }
 
     /// <summary>

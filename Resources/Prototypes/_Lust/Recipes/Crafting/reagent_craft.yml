@@ -6,7 +6,7 @@
   targetNode: blueOintment
   category: construction-category-tools
   objectType: Item
-  description: reagent-craft-description
+  description: reagent-craft-description-blue-ointment
   conditions:
   - !type:ReagentCraftCondition
     stack: Ointment
@@ -20,7 +20,7 @@
   targetNode: redOintment
   category: construction-category-tools
   objectType: Item
-  description: reagent-craft-description
+  description: reagent-craft-description-red-ointment
   conditions:
   - !type:ReagentCraftCondition
     stack: Ointment
@@ -34,7 +34,7 @@
   targetNode: redPunctPack
   category: construction-category-tools
   objectType: Item
-  description: reagent-craft-description
+  description: reagent-craft-description-red-punct-pack
   conditions:
   - !type:ReagentCraftCondition
     stack: Brutepack
@@ -48,7 +48,7 @@
   targetNode: redLacePack
   category: construction-category-tools
   objectType: Item
-  description: reagent-craft-description
+  description: reagent-craft-description-red-lace-pack
   conditions:
   - !type:ReagentCraftCondition
     stack: Brutepack
@@ -62,7 +62,7 @@
   targetNode: redBruizPack
   category: construction-category-tools
   objectType: Item
-  description: reagent-craft-description
+  description: reagent-craft-description-red-bruiz-pack
   conditions:
   - !type:ReagentCraftCondition
     stack: Brutepack

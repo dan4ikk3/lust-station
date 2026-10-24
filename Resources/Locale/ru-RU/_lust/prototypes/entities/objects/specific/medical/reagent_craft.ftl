@@ -1,0 +1,15 @@
+ent-Blueointment1ReagentCraft = { ent-Blueointment1 }
+    .desc = { ent-Blueointment1.desc }
+ent-RedOintment1ReagentCraft = { ent-RedOintment1 }
+    .desc = { ent-RedOintment1.desc }
+ent-RedPunctPack1ReagentCraft = { ent-RedPunctPack1 }
+    .desc = { ent-RedPunctPack1.desc }
+ent-RedLacePack1ReagentCraft = { ent-RedLacePack1 }
+    .desc = { ent-RedLacePack1.desc }
+ent-RedBruizPack1ReagentCraft = { ent-RedBruizPack1 }
+    .desc = { ent-RedBruizPack1.desc }
+reagent-craft-description-blue-ointment = Нужно в ёмкости: 15ед { reagent-name-leporazine }.
+reagent-craft-description-red-ointment = Нужно в ёмкости: 15ед { reagent-name-pyrazine }.
+reagent-craft-description-red-punct-pack = Нужно в ёмкости: 15ед { reagent-name-puncturase }.
+reagent-craft-description-red-lace-pack = Нужно в ёмкости: 15ед { reagent-name-lacerinol }.
+reagent-craft-description-red-bruiz-pack = Нужно в ёмкости: 15ед { reagent-name-bruizine }.

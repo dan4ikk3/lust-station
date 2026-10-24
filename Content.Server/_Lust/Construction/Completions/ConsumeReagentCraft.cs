@@ -33,7 +33,7 @@ public sealed partial class ConsumeReagentCraft : IGraphAction
             return;
         }
 
-        entityManager.System<SharedPopupSystem>().PopupEntity(Loc.GetString("reagent-craft-failed"), user, user);
+        entityManager.System<SharedPopupSystem>().PopupEntity(Loc.GetString("construction-system-construct-no-materials"), user, user);
         entityManager.QueueDeleteEntity(uid);
     }
 }
