@@ -47,6 +47,8 @@ public sealed partial class ConsumeReagentCraft : IGraphAction
         stacks.TryMergeToHands(refund, user);
 
         entityManager.System<SharedPopupSystem>().PopupEntity(Loc.GetString("construction-system-construct-no-materials"), user, user);
+        // Без стака результат не сольётся с готовой стопкой в руках до отложенного удаления
+        entityManager.RemoveComponent<StackComponent>(uid);
         entityManager.QueueDeleteEntity(uid);
     }
 }
