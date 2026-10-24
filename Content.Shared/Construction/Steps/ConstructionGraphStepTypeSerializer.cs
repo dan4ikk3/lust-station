@@ -46,13 +46,6 @@ namespace Content.Shared.Construction.Steps
                 return typeof(PartAssemblyConstructionGraphStep);
             }
 
-            // Lust-start
-            if (node.Has("reagent"))
-            {
-                return typeof(ReagentConstructionGraphStep);
-            }
-            // Lust-end
-
             return null;
         }
 

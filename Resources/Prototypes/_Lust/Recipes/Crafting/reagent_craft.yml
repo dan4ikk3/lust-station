@@ -1,4 +1,4 @@
-# Крафты пропиткой реагентом в меню крафта (G)
+# Крафты пропиткой реагентом в меню крафта
 - type: construction
   id: ReagentCraftBlueOintment
   graph: ReagentCraft
@@ -6,6 +6,12 @@
   targetNode: blueOintment
   category: construction-category-tools
   objectType: Item
+  description: reagent-craft-description
+  conditions:
+  - !type:ReagentCraftCondition
+    stack: Ointment
+    reagent: Leporazine
+    amount: 15
 
 - type: construction
   id: ReagentCraftRedOintment
@@ -14,6 +20,12 @@
   targetNode: redOintment
   category: construction-category-tools
   objectType: Item
+  description: reagent-craft-description
+  conditions:
+  - !type:ReagentCraftCondition
+    stack: Ointment
+    reagent: Pyrazine
+    amount: 15
 
 - type: construction
   id: ReagentCraftRedPunctPack
@@ -22,6 +34,12 @@
   targetNode: redPunctPack
   category: construction-category-tools
   objectType: Item
+  description: reagent-craft-description
+  conditions:
+  - !type:ReagentCraftCondition
+    stack: Brutepack
+    reagent: Puncturase
+    amount: 15
 
 - type: construction
   id: ReagentCraftRedLacePack
@@ -30,6 +48,12 @@
   targetNode: redLacePack
   category: construction-category-tools
   objectType: Item
+  description: reagent-craft-description
+  conditions:
+  - !type:ReagentCraftCondition
+    stack: Brutepack
+    reagent: Lacerinol
+    amount: 15
 
 - type: construction
   id: ReagentCraftRedBruizPack
@@ -38,3 +62,9 @@
   targetNode: redBruizPack
   category: construction-category-tools
   objectType: Item
+  description: reagent-craft-description
+  conditions:
+  - !type:ReagentCraftCondition
+    stack: Brutepack
+    reagent: Bruizine
+    amount: 15

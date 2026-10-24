@@ -6,34 +6,49 @@
   - node: start
     edges:
     - to: blueOintment
-      steps:
-      - stack: Ointment
+      completed:
+      - !type:ConsumeReagentCraft
         reagent: Leporazine
         amount: 15
+      steps:
+      - material: Ointment
+        amount: 1
         doAfter: 3
     - to: redOintment
-      steps:
-      - stack: Ointment
+      completed:
+      - !type:ConsumeReagentCraft
         reagent: Pyrazine
         amount: 15
+      steps:
+      - material: Ointment
+        amount: 1
         doAfter: 3
     - to: redPunctPack
-      steps:
-      - stack: Brutepack
+      completed:
+      - !type:ConsumeReagentCraft
         reagent: Puncturase
         amount: 15
+      steps:
+      - material: Brutepack
+        amount: 1
         doAfter: 3
     - to: redLacePack
-      steps:
-      - stack: Brutepack
+      completed:
+      - !type:ConsumeReagentCraft
         reagent: Lacerinol
         amount: 15
+      steps:
+      - material: Brutepack
+        amount: 1
         doAfter: 3
     - to: redBruizPack
-      steps:
-      - stack: Brutepack
+      completed:
+      - !type:ConsumeReagentCraft
         reagent: Bruizine
         amount: 15
+      steps:
+      - material: Brutepack
+        amount: 1
         doAfter: 3
   - node: blueOintment
     entity: Blueointment1ReagentCraft

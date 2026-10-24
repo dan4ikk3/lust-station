@@ -236,12 +236,6 @@ namespace Content.Server.Construction
                         }
 
                         break;
-
-                    // Lust-start
-                    case ReagentConstructionGraphStep reagentStep:
-                        handled = TryFindReagentCraft(user, reagentStep, out _, out _);
-                        break;
-                    // Lust-end
                 }
 
                 if (handled == false)
@@ -275,14 +269,6 @@ namespace Content.Server.Construction
                 FailCleanup();
                 return null;
             }
-
-            // Lust-start
-            if (!TryConsumeReagentCraft(user, edge.Steps))
-            {
-                FailCleanup();
-                return null;
-            }
-            // Lust-end
 
             var newEntityProto = graph.Nodes[edge.Target].Entity.GetId(null, user, new(EntityManager));
             var newEntity = SpawnAttachedTo(newEntityProto, coords, rotation: angle);
