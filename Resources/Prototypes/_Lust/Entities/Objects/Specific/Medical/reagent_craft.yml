@@ -1,44 +1,44 @@
 - type: entity
   parent: Blueointment1
-  id: Blueointment1ReagentCraft
+  id: LustBlueointment1ReagentCraft
   categories: [ HideSpawnMenu ]
   components:
   - type: Construction
-    graph: ReagentCraft
+    graph: LustReagentCraft
     node: blueOintment
 
 - type: entity
   parent: RedOintment1
-  id: RedOintment1ReagentCraft
+  id: LustRedOintment1ReagentCraft
   categories: [ HideSpawnMenu ]
   components:
   - type: Construction
-    graph: ReagentCraft
+    graph: LustReagentCraft
     node: redOintment
 
 - type: entity
   parent: RedPunctPack1
-  id: RedPunctPack1ReagentCraft
+  id: LustRedPunctPack1ReagentCraft
   categories: [ HideSpawnMenu ]
   components:
   - type: Construction
-    graph: ReagentCraft
+    graph: LustReagentCraft
     node: redPunctPack
 
 - type: entity
   parent: RedLacePack1
-  id: RedLacePack1ReagentCraft
+  id: LustRedLacePack1ReagentCraft
   categories: [ HideSpawnMenu ]
   components:
   - type: Construction
-    graph: ReagentCraft
+    graph: LustReagentCraft
     node: redLacePack
 
 - type: entity
   parent: RedBruizPack1
-  id: RedBruizPack1ReagentCraft
+  id: LustRedBruizPack1ReagentCraft
   categories: [ HideSpawnMenu ]
   components:
   - type: Construction
-    graph: ReagentCraft
+    graph: LustReagentCraft
     node: redBruizPack

@@ -1,12 +1,12 @@
-ent-Blueointment1ReagentCraft = { ent-Blueointment1 }
+ent-LustBlueointment1ReagentCraft = { ent-Blueointment1 }
     .desc = { ent-Blueointment1.desc }
-ent-RedOintment1ReagentCraft = { ent-RedOintment1 }
+ent-LustRedOintment1ReagentCraft = { ent-RedOintment1 }
     .desc = { ent-RedOintment1.desc }
-ent-RedPunctPack1ReagentCraft = { ent-RedPunctPack1 }
+ent-LustRedPunctPack1ReagentCraft = { ent-RedPunctPack1 }
     .desc = { ent-RedPunctPack1.desc }
-ent-RedLacePack1ReagentCraft = { ent-RedLacePack1 }
+ent-LustRedLacePack1ReagentCraft = { ent-RedLacePack1 }
     .desc = { ent-RedLacePack1.desc }
-ent-RedBruizPack1ReagentCraft = { ent-RedBruizPack1 }
+ent-LustRedBruizPack1ReagentCraft = { ent-RedBruizPack1 }
     .desc = { ent-RedBruizPack1.desc }
 reagent-craft-description-blue-ointment = Хорошо лечит: { damage-type-shock }, { damage-type-cold }.
 reagent-craft-description-red-ointment = Хорошо лечит: { damage-type-heat }, { damage-type-cold }, { damage-type-shock }.

@@ -1,6 +1,6 @@
 # Крафты пропиткой для меню крафта
 - type: constructionGraph
-  id: ReagentCraft
+  id: LustReagentCraft
   start: start
   graph:
   - node: start
@@ -56,12 +56,12 @@
         amount: 1
         doAfter: 3
   - node: blueOintment
-    entity: Blueointment1ReagentCraft
+    entity: LustBlueointment1ReagentCraft
   - node: redOintment
-    entity: RedOintment1ReagentCraft
+    entity: LustRedOintment1ReagentCraft
   - node: redPunctPack
-    entity: RedPunctPack1ReagentCraft
+    entity: LustRedPunctPack1ReagentCraft
   - node: redLacePack
-    entity: RedLacePack1ReagentCraft
+    entity: LustRedLacePack1ReagentCraft
   - node: redBruizPack
-    entity: RedBruizPack1ReagentCraft
+    entity: LustRedBruizPack1ReagentCraft
