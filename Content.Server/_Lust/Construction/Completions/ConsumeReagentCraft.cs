@@ -29,7 +29,8 @@ public sealed partial class ConsumeReagentCraft : IGraphAction
 
         if (ReagentCraftCondition.TryFindContainer(user, Reagent, Amount, out var solution))
         {
-            entityManager.System<SharedSolutionContainerSystem>().RemoveReagent(solution, Reagent, Amount);
+            // В ёмкости только этот реагент, поэтому забираем порцию целиком, независимо от данных реагента
+            entityManager.System<SharedSolutionContainerSystem>().SplitSolution(solution, Amount);
             return;
         }
 

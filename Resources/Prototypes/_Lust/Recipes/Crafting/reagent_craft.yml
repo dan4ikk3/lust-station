@@ -1,6 +1,6 @@
 # Крафты пропиткой реагентом в меню крафта
 - type: construction
-  id: ReagentCraftBlueOintment
+  id: LustReagentCraftBlueOintment
   graph: ReagentCraft
   startNode: start
   targetNode: blueOintment
@@ -14,7 +14,7 @@
     amount: 15
 
 - type: construction
-  id: ReagentCraftRedOintment
+  id: LustReagentCraftRedOintment
   graph: ReagentCraft
   startNode: start
   targetNode: redOintment
@@ -28,7 +28,7 @@
     amount: 15
 
 - type: construction
-  id: ReagentCraftRedPunctPack
+  id: LustReagentCraftRedPunctPack
   graph: ReagentCraft
   startNode: start
   targetNode: redPunctPack
@@ -42,7 +42,7 @@
     amount: 15
 
 - type: construction
-  id: ReagentCraftRedLacePack
+  id: LustReagentCraftRedLacePack
   graph: ReagentCraft
   startNode: start
   targetNode: redLacePack
@@ -56,7 +56,7 @@
     amount: 15
 
 - type: construction
-  id: ReagentCraftRedBruizPack
+  id: LustReagentCraftRedBruizPack
   graph: ReagentCraft
   startNode: start
   targetNode: redBruizPack
