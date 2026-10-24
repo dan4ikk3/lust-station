@@ -43,7 +43,15 @@ public sealed partial class ReagentCraftCondition : IConstructionCondition
 
     public ConstructionGuideEntry GenerateGuideEntry()
     {
-        return new ConstructionGuideEntry { Localization = "construction-system-construct-no-materials" };
+        return new ConstructionGuideEntry
+        {
+            Localization = "reagent-craft-condition",
+            Arguments = new (string, object)[]
+            {
+                ("amount", Amount.Int()),
+                ("reagent", IoCManager.Resolve<IPrototypeManager>().Index(Reagent).LocalizedName),
+            },
+        };
     }
 
     /// <summary>

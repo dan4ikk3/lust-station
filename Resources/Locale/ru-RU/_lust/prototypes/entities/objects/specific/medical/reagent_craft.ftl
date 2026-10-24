@@ -13,3 +13,4 @@ reagent-craft-description-red-ointment = Нужно в ёмкости: 15ед { 
 reagent-craft-description-red-punct-pack = Нужно в ёмкости: 15ед { reagent-name-puncturase }.
 reagent-craft-description-red-lace-pack = Нужно в ёмкости: 15ед { reagent-name-lacerinol }.
 reagent-craft-description-red-bruiz-pack = Нужно в ёмкости: 15ед { reagent-name-bruizine }.
+reagent-craft-condition = Ёмкость в руке: { $amount }ед { $reagent }, без примесей.

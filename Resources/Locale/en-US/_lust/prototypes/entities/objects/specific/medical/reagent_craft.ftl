@@ -13,3 +13,4 @@ reagent-craft-description-red-ointment = Needs in a container: 15u { reagent-nam
 reagent-craft-description-red-punct-pack = Needs in a container: 15u { reagent-name-puncturase }.
 reagent-craft-description-red-lace-pack = Needs in a container: 15u { reagent-name-lacerinol }.
 reagent-craft-description-red-bruiz-pack = Needs in a container: 15u { reagent-name-bruizine }.
+reagent-craft-condition = Container in hand: { $amount }u of { $reagent }, nothing else mixed in.
