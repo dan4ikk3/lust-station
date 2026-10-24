@@ -2,6 +2,7 @@ using System.Linq;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Construction.Steps;
+using Content.Shared.FixedPoint;
 using Content.Shared.Stacks;
 
 namespace Content.Server.Construction;
@@ -47,19 +48,38 @@ public sealed partial class ConstructionSystem
     }
 
     /// <summary>
-    /// Списывает ингредиенты по reagent-шагам ребра, состав в руках проверяется заново после DoAfter.
+    /// Списывает ингредиенты по reagent-шагам ребра. Сначала проверяются все шаги вместе, потом списывается всё сразу.
     /// </summary>
     private bool TryConsumeReagentCraft(EntityUid user, IEnumerable<ConstructionGraphStep> steps)
     {
-        foreach (var step in steps)
+        var found = new List<(Entity<StackComponent> Stack, Entity<SolutionComponent> Solution, ReagentConstructionGraphStep Step)>();
+        foreach (var step in steps.OfType<ReagentConstructionGraphStep>())
         {
-            if (step is not ReagentConstructionGraphStep reagentStep)
-                continue;
-
-            if (!TryFindReagentCraft(user, reagentStep, out var stack, out var solution))
+            if (!TryFindReagentCraft(user, step, out var stack, out var solution))
                 return false;
 
-            _solutionContainer.RemoveReagent(solution, reagentStep.Reagent, reagentStep.Amount);
+            found.Add((stack, solution, step));
+        }
+
+        // Одинаковые шаги не должны делить одну порцию стака или реагента на двоих
+        foreach (var (stack, solution, step) in found)
+        {
+            if (found.Count(f => f.Stack.Owner == stack.Owner) > stack.Comp.Count)
+                return false;
+
+            var need = FixedPoint2.Zero;
+            foreach (var other in found.Where(f => f.Solution.Owner == solution.Owner && f.Step.Reagent == step.Reagent))
+            {
+                need += other.Step.Amount;
+            }
+
+            if (solution.Comp.Solution.GetTotalPrototypeQuantity(step.Reagent) < need)
+                return false;
+        }
+
+        foreach (var (stack, solution, step) in found)
+        {
+            _solutionContainer.RemoveReagent(solution, step.Reagent, step.Amount);
             _stackSystem.ReduceCount((stack.Owner, stack.Comp), 1);
         }
 

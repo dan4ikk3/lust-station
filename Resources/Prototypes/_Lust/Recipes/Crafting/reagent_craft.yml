@@ -1,6 +1,6 @@
 # Крафты пропиткой реагентом в меню крафта (G)
 - type: construction
-  id: reagentCraftBlueOintment
+  id: ReagentCraftBlueOintment
   graph: ReagentCraft
   startNode: start
   targetNode: blueOintment
@@ -8,7 +8,7 @@
   objectType: Item
 
 - type: construction
-  id: reagentCraftRedOintment
+  id: ReagentCraftRedOintment
   graph: ReagentCraft
   startNode: start
   targetNode: redOintment
@@ -16,7 +16,7 @@
   objectType: Item
 
 - type: construction
-  id: reagentCraftRedPunctPack
+  id: ReagentCraftRedPunctPack
   graph: ReagentCraft
   startNode: start
   targetNode: redPunctPack
@@ -24,7 +24,7 @@
   objectType: Item
 
 - type: construction
-  id: reagentCraftRedLacePack
+  id: ReagentCraftRedLacePack
   graph: ReagentCraft
   startNode: start
   targetNode: redLacePack
@@ -32,7 +32,7 @@
   objectType: Item
 
 - type: construction
-  id: reagentCraftRedBruizPack
+  id: ReagentCraftRedBruizPack
   graph: ReagentCraft
   startNode: start
   targetNode: redBruizPack

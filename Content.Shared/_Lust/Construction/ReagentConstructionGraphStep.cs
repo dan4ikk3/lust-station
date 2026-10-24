@@ -30,12 +30,18 @@ public sealed partial class ReagentConstructionGraphStep : ConstructionGraphStep
         {
             Localization = "construction-presenter-reagent-step",
             Arguments = Arguments(),
+            Icon = IoCManager.Resolve<IPrototypeManager>().Index(Stack).Icon,
         };
     }
 
     private (string, object)[] Arguments()
     {
         var prototypes = IoCManager.Resolve<IPrototypeManager>();
-        return new (string, object)[] { ("amount", Amount), ("reagent", prototypes.Index(Reagent).LocalizedName) };
+        return new (string, object)[]
+        {
+            ("stack", Loc.GetString(prototypes.Index(Stack).Name, ("amount", 1))),
+            ("amount", Amount),
+            ("reagent", prototypes.Index(Reagent).LocalizedName),
+        };
     }
 }
